@@ -7,6 +7,13 @@ import Form from '../../containers/Form';
 import Invoices from '../../containers/Invoices';
 import Contacts from '../../containers/Contacts';
 import Settings from '../../containers/Settings';
+import Presets from '../../containers/Presets';
+import Gpu from '../../containers/gpu';
+import MouseKeyboard from '../../containers/Mousekeyboard'
+import Memory from '../../containers/Memory';
+import Apps from '../../containers/Apps';
+import About from '../../containers/About';
+
 
 // Layout
 import { AppMainContent } from '../shared/Layout';
@@ -20,10 +27,12 @@ class AppMain extends Component {
     const { activeTab } = this.props;
     return (
       <AppMainContent>
-        {activeTab === 'form' && <Form />}
-        {activeTab === 'invoices' && <Invoices />}
-        {activeTab === 'contacts' && <Contacts />}
-        {activeTab === 'settings' && <Settings />}
+        {activeTab === 'presets' && <Presets />}
+        {activeTab === 'gpu' && <Gpu />}
+        {activeTab === 'mousekeyboard' && <MouseKeyboard />}
+        {activeTab === 'memory' && <Memory />}
+        {activeTab === 'apps' && <Apps />}
+        {activeTab === 'about' && <About />}
       </AppMainContent>
     );
   }

@@ -20,22 +20,22 @@ const setMarginValue = activeTab => {
 const allTabs = [
   {
     title: 'Presets',
-    name: 'form',
+    name: 'presets',
     icon: 'ion-ios-home',
   },
   {
     title: 'GPU',
-    name: 'invoices',
+    name: 'gpu',
     icon: 'ion-android-desktop',
   },
   {
     title: 'M/K',
-    name: 'contacts',
+    name: 'mousekeyboard',
     icon: 'ion-mouse',
   },
   {
     title: 'Memory',
-    name: 'settings',
+    name: 'memory',
     icon: 'ion-ios-color-filter-outline',
   },
   {
@@ -73,10 +73,11 @@ export const Tab = styled.a`
   display: flex;
   align-items: center;
   justify-content: flex-start; 
-  font-size: 16px;
+  font-size: 14px;
   line-height: 1.5;
   text-decoration: none;
   height: 60px;
+  width: 200px;
   padding: 0 10px; 
   &:hover {
     color: white;
@@ -88,10 +89,10 @@ export const Tab = styled.a`
 export const Icon = styled.i`
   padding-left: 10px;
   font-size:32px;
-  ${props => props.id === 'form' && `color: #6bbb69;`};
-  ${props => props.id === 'contacts' && `color: #469fe5;`};
-  ${props => props.id === 'settings' && `color: #f22727;`};
-  ${props => props.id === 'invoices' && `color: #cbc189;`};
+  ${props => props.id === 'presets' && `color: #6bbb69;`};
+  ${props => props.id === 'gpu' && `color: #469fe5;`};
+  ${props => props.id === 'mousekeyboard' && `color: #f22727;`};
+  ${props => props.id === 'memory' && `color: #cbc189;`};
   ${props => props.id === 'apps' && `color: #899dcb;`};
   ${props => props.id === 'about' && `color: #b389cb;`};
 `;
