@@ -114,6 +114,10 @@ const commonConfig = merge([
           exclude: [path.resolve(__dirname, 'node_modules')],
           loader: 'babel-loader',
         },
+        {
+          test: /\.(jpe?g|png|gif|woff|woff2|eot|ttf|svg)(\?[a-z0-9=.]+)?$/,
+          loader: 'url-loader?limit=100000'
+         }
       ],
     },
 

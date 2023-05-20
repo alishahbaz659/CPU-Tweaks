@@ -56,7 +56,20 @@ const PageHeaderActionsStyle = styled.div`
 const PageContentStyle = styled.div`
   // flex: 1;
   // overflow: hidden;
-  margin: 90px 40px 40px 40px;
+  margin: 90px 40px 40px 40px;  
+  ${props =>
+    !props.bare &&
+    `
+    border: 1px solid rgba(0,0,0,.1);
+    border-radius: 4px;
+    background: #FFF;
+  `};
+`;
+
+const PageContentChildStyle = styled.div`
+  // flex: 1;
+  // overflow: hidden;
+  margin: 1px 40px 40px 40px;
   ${props =>
     !props.bare &&
     `
@@ -99,6 +112,12 @@ const PageContent = props => (
   <PageContentStyle bare={props.bare}>{props.children}</PageContentStyle>
 );
 
+const PageContentChild = props => (
+  <PageContentChildStyle bare={props.bare}>{props.children}</PageContentChildStyle>
+);
+
+
+
 const PageFooter = props => <PageFooterStyle>{props.children}</PageFooterStyle>;
 
 export {
@@ -109,5 +128,6 @@ export {
   PageHeaderTitle,
   PageHeaderActions,
   PageContent,
+  PageContentChild,
   PageFooter,
 };
