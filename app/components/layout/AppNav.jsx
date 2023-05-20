@@ -1,4 +1,3 @@
-// Libraries
 import React from 'react';
 import PropTypes from 'prop-types';
 import { findIndex } from 'lodash';
@@ -20,24 +19,34 @@ const setMarginValue = activeTab => {
 
 const allTabs = [
   {
-    title: 'Create',
+    title: 'Presets',
     name: 'form',
-    icon: 'ion-document-text',
+    icon: 'ion-ios-home',
   },
   {
-    title: 'Invoices',
+    title: 'GPU',
     name: 'invoices',
-    icon: 'ion-ios-filing',
+    icon: 'ion-android-desktop',
   },
   {
-    title: 'Contacts',
+    title: 'M/K',
     name: 'contacts',
-    icon: 'ion-person-stalker',
+    icon: 'ion-mouse',
   },
   {
-    title: 'Settings',
+    title: 'Memory',
     name: 'settings',
-    icon: 'ion-ios-gear',
+    icon: 'ion-ios-color-filter-outline',
+  },
+  {
+    title: 'Apps',
+    name: 'apps',
+    icon: 'ion-android-apps',
+  },
+  {
+    title: 'About',
+    name: 'about',
+    icon: 'ion-information-circled',
   },
 ];
 
@@ -45,40 +54,50 @@ const allTabs = [
 import styled from 'styled-components';
 
 export const SideBar = styled.div`
-  flex: 1;
+  flex: 1 0 auto;
   position: relative;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   height: 100%;
-  width: 80px;
   min-width: 80px;
-  max-width: 80px;
+  max-width: 200px;
   background: #2c323a;
+  padding-right: 100px; /* Add padding to the right side */
 `;
+
 
 export const Tab = styled.a`
   position: relative;
   color: white;
   display: flex;
-  width: 100%;
   align-items: center;
-  justify-content: center;
-  font-size: 24px;
+  justify-content: flex-start; 
+  font-size: 16px;
   line-height: 1.5;
   text-decoration: none;
   height: 60px;
+  padding: 0 10px; 
   &:hover {
     color: white;
     text-decoration: none;
   }
 `;
 
+
 export const Icon = styled.i`
+  padding-left: 10px;
+  font-size:32px;
   ${props => props.id === 'form' && `color: #6bbb69;`};
   ${props => props.id === 'contacts' && `color: #469fe5;`};
-  ${props => props.id === 'settings' && `color: #C4C8CC;`};
+  ${props => props.id === 'settings' && `color: #f22727;`};
   ${props => props.id === 'invoices' && `color: #cbc189;`};
+  ${props => props.id === 'apps' && `color: #899dcb;`};
+  ${props => props.id === 'about' && `color: #b389cb;`};
+`;
+
+export const TabText = styled.span`
+  margin-left: 10px;
 `;
 
 export const ActiveIndicator = styled.div`
@@ -88,7 +107,7 @@ export const ActiveIndicator = styled.div`
   > div {
     position: absolute;
     background: #292b2c;
-    width: 80px;
+    width: 200px;
     border-left: 5px solid #469fe5;
   }
 `;
@@ -100,6 +119,7 @@ function AppNav({ activeTab, changeTab }) {
   const allTabsComponent = allTabs.map(tab => (
     <Tab key={tab.name} href="#" onClick={() => changeTab(tab.name)}>
       <Icon id={tab.name} className={tab.icon} />
+      <TabText>{tab.title}</TabText>
     </Tab>
   ));
   return (

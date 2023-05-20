@@ -67,7 +67,7 @@ class Form extends PureComponent {
               : t('form:header:new')
             }
           </PageHeaderTitle>
-          <PageHeaderActions>
+          {/* <PageHeaderActions>
             <Button danger onClick={clearForm}>
               {t('form:header:btns:clear')}
             </Button>
@@ -80,7 +80,7 @@ class Form extends PureComponent {
                 ? t('form:header:btns:update')
                 : t('form:header:btns:saveAndPreview')}
             </Button>
-          </PageHeaderActions>
+          </PageHeaderActions> */}
         </PageHeader>
         <PageContent>
           <Settings

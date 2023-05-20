@@ -59,6 +59,7 @@
     "reselect": "^3.0.1",
     "spectron": "^3.8.0",
     "styled-components": "^3.2.1",
+    "upath": "^2.0.1",
     "uuid": "^3.2.1"
   },
   "devDependencies": {
@@ -98,23 +99,15 @@
     "react-hot-loader": "^4.0.0",
     "react-test-renderer": "^16.2.0",
     "redux-logger": "^3.0.6",
-    "webpack": "^4.1.1",
+    "webpack": "^4.46.0",
     "webpack-bundle-analyzer": "^2.11.1",
-    "webpack-cli": "^2.0.11",
+    "webpack-cli": "^3.1.1",
     "webpack-dev-server": "^3.1.1",
     "webpack-merge": "^4.1.2",
     "webpack-node-externals": "^1.6.0"
-  },
-  "pre-commit": [
-    "lint-staged"
-  ],
-  "lint-staged": {
-    "*.jsx?": [
-      "npm run prettier:base",
-      "eslint",
-      "git add"
-    ]
-  },
+  }
+  ,
+  
   "prettier": {
     "proseWrap": "never",
     "singleQuote": true,
