@@ -39,7 +39,7 @@ const aboutMenu = {
 };
 
 const invoiceMenu = {
-  label: 'Invoice',
+  label: 'Home',
   submenu: [
     {
       label: 'New',

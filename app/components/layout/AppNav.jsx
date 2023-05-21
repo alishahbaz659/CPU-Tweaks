@@ -52,17 +52,18 @@ const allTabs = [
 
 // Styles
 import styled from 'styled-components';
+import '../../fonts/fonts.css';
 
 export const SideBar = styled.div`
   flex: 1 0 auto;
   position: relative;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: center;
   height: 100%;
   min-width: 80px;
-  max-width: 200px;
-  background: #2c323a;
+  max-width: 210px;
+  background: #292728;
   padding-right: 100px; /* Add padding to the right side */
 `;
 
@@ -72,7 +73,7 @@ export const Tab = styled.a`
   color: white;
   display: flex;
   align-items: center;
-  justify-content: flex-start; 
+  justify-content: center; 
   font-size: 14px;
   line-height: 1.5;
   text-decoration: none;
@@ -89,6 +90,7 @@ export const Tab = styled.a`
 export const Icon = styled.i`
   padding-left: 10px;
   font-size:32px;
+  ${props => props.id === 'form' && `color: #6bbb69;`};
   ${props => props.id === 'presets' && `color: #6bbb69;`};
   ${props => props.id === 'gpu' && `color: #469fe5;`};
   ${props => props.id === 'mousekeyboard' && `color: #f22727;`};
@@ -98,7 +100,9 @@ export const Icon = styled.i`
 `;
 
 export const TabText = styled.span`
-  margin-left: 10px;
+  font-weight: 800;
+  font-size:22px;
+  font-family: 'CustomFont', sans-serif;
 `;
 
 export const ActiveIndicator = styled.div`
@@ -108,8 +112,9 @@ export const ActiveIndicator = styled.div`
   > div {
     position: absolute;
     background: #292b2c;
-    width: 200px;
-    border-left: 5px solid #469fe5;
+    width: 210px;
+    border-left: 5px solid #A50021;
+    border-right: 5px solid #A50021;
   }
 `;
 
@@ -119,7 +124,7 @@ function AppNav({ activeTab, changeTab }) {
   const marginTopValue = setMarginValue(activeTab);
   const allTabsComponent = allTabs.map(tab => (
     <Tab key={tab.name} href="#" onClick={() => changeTab(tab.name)}>
-      <Icon id={tab.name} className={tab.icon} />
+      {/* <Icon id={tab.name} className={tab.icon} /> */}
       <TabText>{tab.title}</TabText>
     </Tab>
   ));

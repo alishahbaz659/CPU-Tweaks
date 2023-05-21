@@ -25,6 +25,7 @@ class AppMain extends Component {
 
   render() {
     const { activeTab } = this.props;
+    console.log('Active Tab:', activeTab); 
     return (
       <AppMainContent>
         {activeTab === 'presets' && <Presets />}
