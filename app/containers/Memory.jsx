@@ -15,13 +15,13 @@ class Memory extends PureComponent {
     return (
       <PageWrapper>
         <PageHeader>
-          <PageHeaderTitle>
+          {/* <PageHeaderTitle>
             Memory
-          </PageHeaderTitle>
+          </PageHeaderTitle> */}
         </PageHeader>
-        <PageContent>
+        {/* <PageContent>
         asd
-        </PageContent>
+        </PageContent> */}
       </PageWrapper>
     );
   }

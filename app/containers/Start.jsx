@@ -59,12 +59,9 @@ const styles = `
     flex-direction: column;
     justify-content: center;
     height: 100%;
+    margin-top:5%;
   }
-
-
 `;
-
-
 
 // Component
 class Start extends PureComponent {

@@ -15,13 +15,13 @@ class Tweaks extends PureComponent {
     return (
       <PageWrapper>
         <PageHeader>
-          <PageHeaderTitle>
+          {/* <PageHeaderTitle>
             Tweaks
-          </PageHeaderTitle>
+          </PageHeaderTitle> */}
         </PageHeader>
-        <PageContent>
+        {/* <PageContent>
         asd
-        </PageContent>
+        </PageContent> */}
       </PageWrapper>
     );
   }

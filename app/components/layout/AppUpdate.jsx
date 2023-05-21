@@ -157,7 +157,7 @@ class AppUpdate extends PureComponent {
   render() {
     return (
       <Indicator>
-        {this.state.checking && <i className="ion-cloud" />}
+        {this.state.checking || <i className="ion-cloud" />}
         {this.state.downloading && (
           <Circle
             percent={this.state.progress}

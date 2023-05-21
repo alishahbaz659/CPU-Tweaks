@@ -15,13 +15,13 @@ class Finish extends PureComponent {
     return (
       <PageWrapper>
         <PageHeader>
-          <PageHeaderTitle>
+          {/* <PageHeaderTitle>
             Finish
-          </PageHeaderTitle>
+          </PageHeaderTitle> */}
         </PageHeader>
-        <PageContent>
+        {/* <PageContent>
         asd
-        </PageContent>
+        </PageContent> */}
       </PageWrapper>
     );
   }

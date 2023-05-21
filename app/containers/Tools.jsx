@@ -15,13 +15,13 @@ class Tools extends PureComponent {
     return (
       <PageWrapper>
         <PageHeader>
-          <PageHeaderTitle>
+          {/* <PageHeaderTitle>
             tools
-          </PageHeaderTitle>
+          </PageHeaderTitle> */}
         </PageHeader>
-        <PageContent>
+        {/* <PageContent>
         asd
-        </PageContent>
+        </PageContent> */}
       </PageWrapper>
     );
   }

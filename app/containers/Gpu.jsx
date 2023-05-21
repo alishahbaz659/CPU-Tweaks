@@ -15,13 +15,13 @@ class Gpu extends PureComponent {
     return (
       <PageWrapper>
         <PageHeader>
-          <PageHeaderTitle>
+          {/* <PageHeaderTitle>
             GPU
-          </PageHeaderTitle>
+          </PageHeaderTitle> */}
         </PageHeader>
-        <PageContent>
+        {/* <PageContent>
         asd
-        </PageContent>
+        </PageContent> */}
       </PageWrapper>
     );
   }

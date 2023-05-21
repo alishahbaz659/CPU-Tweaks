@@ -4,6 +4,14 @@ import { findIndex } from 'lodash';
 
 // Animation
 import { Motion, spring } from 'react-motion';
+import logo from '../../assets/rocketlogo.png';
+import image1 from '../../assets/logo.png';
+import BoosterComponent from '../../assets/BoosterComponent';
+import TwitterComponent from '../../assets/TwitterComponent';
+import InstagramComponent from '../../assets/InstagramComponent';
+import DiscordComponent from '../../assets/DiscordComponent';
+import YoutubeComponent from '../../assets/YoutubeComponent';
+
 
 const springConfig = {
   stiffness: 350,
@@ -65,19 +73,19 @@ import styled from 'styled-components';
 import '../../fonts/fonts.css';
 
 export const SideBar = styled.div`
-  flex: 1 0 auto;
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
+  // flex: 1 0 auto;
+  // position: relative;
+  // display: flex;
+  // flex-direction: column;
+  // justify-content: center;
   // height: 100%;
-  min-width: 80px;
-  max-width: 210px;
-  min-height: 100%;
-  max-height: 100%;
-  padding-top:7%;
-  background: #292728;
-  padding-right: 100px; /* Add padding to the right side */
+  // min-width: 80px;
+  // max-width: 210px;
+  // min-height: 100%;
+  // max-height: 100%;
+  // padding-top:5%;
+  
+  // padding-right: 100px; /* Add padding to the right side */
 `;
 
 
@@ -132,6 +140,47 @@ export const ActiveIndicator = styled.div`
   }
 `;
 
+
+const Wrapper = styled.div`
+flex: 1 0 auto;
+  position: relative;
+display: flex;
+flex-direction: column;
+justify-content: space-around;
+align-content: center;
+align-self: center;
+min-width: 80px;
+  max-width: 210px;
+  min-height: 100%;
+  max-height: 100%;
+  // padding-top:5%;
+  background: #292728;
+  padding-right: 100px;
+`;
+
+const styles = {
+  buttonContainer: {
+    display: 'flex',
+    justifyContent: 'space-between',
+    padding:'5px',
+    width:'200px'
+  },
+  image: {
+    width: '30px',
+    height: '30px',
+  },
+  logo: {
+     width:'100px', 
+     height:'100px',
+  },
+  logoWrapper: {
+    display:'flex',
+    justifyContent:'center',
+    width:'200px',  
+  }
+};
+
+
 import AppUpdate from './AppUpdate';
 
 function AppNav({ activeTab, changeTab }) {
@@ -143,6 +192,11 @@ function AppNav({ activeTab, changeTab }) {
     </Tab>
   ));
   return (
+    <Wrapper>
+      <div  style={styles.logoWrapper}>
+      <img src={logo} alt="Logo" style={styles.logo}></img>
+      </div>
+      {/* <AppUpdate /> */}
     <SideBar>
       <div>
         <Motion style={{ marginTop: spring(marginTopValue, springConfig) }}>
@@ -159,8 +213,17 @@ function AppNav({ activeTab, changeTab }) {
         </Motion>
         {allTabsComponent}
       </div>
-      <AppUpdate />
+      
     </SideBar>
+
+    {/* <AppUpdate /> */}
+    <div style={styles.buttonContainer}>
+    <TwitterComponent style={styles.image}></TwitterComponent>
+    <InstagramComponent style={styles.image}></InstagramComponent>
+    <DiscordComponent style={styles.image}></DiscordComponent>
+    <YoutubeComponent style={styles.image}></YoutubeComponent>
+    </div>
+    </Wrapper>
   );
 }
 

@@ -14,7 +14,7 @@ const AppMainContentStyle = styled.div`
   overflow: auto;
   width: 100%;
   height: 100%;
-  background: #f9fafa;
+  background: #F0F0F0;
 `;
 
 const PageWrapperStyle = styled.div`
