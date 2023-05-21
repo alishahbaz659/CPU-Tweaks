@@ -26,7 +26,7 @@ const styles = `
     border-radius: 10px;
     background-color: #A50021;
     color: white;
-    letter-spacing: 1.0px;
+    letter-spacing: 2.0px;
     font-size: 24px;
     font-family: 'CustomFont', sans-serif;
     border: none;
@@ -39,6 +39,7 @@ const styles = `
 
   }
   .step-container {
+    padding:12px;
     display: flex;
   justify-content: space-between;
   align-items: center;
@@ -49,7 +50,7 @@ const styles = `
     font-size: 50px;
     font-weight: bold;
     font-family: 'CustomFont', sans-serif;
-    letter-spacing: 1.0px;
+    letter-spacing: 2.0px;
     padding-top: 2%;
   }
 
@@ -72,9 +73,9 @@ class Start extends PureComponent {
       <PageWrapper>
         <style>{styles}</style>
         <PageHeader>
-          <PageHeaderTitle>
+          {/* <PageHeaderTitle>
             Start
-          </PageHeaderTitle>
+          </PageHeaderTitle> */}
         </PageHeader>
       
       <div className="page-content-container">

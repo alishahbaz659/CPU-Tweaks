@@ -30,8 +30,8 @@ const PageHeaderStyle = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-between;
-  height: 50px;
-  padding: 10px 120px 10px 40px;
+  height: 12px;
+  // padding: 10px 120px 10px 40px;
   background: #A50021;
   border-bottom: 1px solid rgba(0, 0, 0, 0.1);
   z-index: 1;
@@ -57,13 +57,13 @@ const PageHeaderActionsStyle = styled.div`
 const PageContentStyle = styled.div`
   // flex: 1;
   // overflow: hidden;
-  margin: 90px 40px 40px 40px;
+  margin: 0px 40px 40px 40px;
   ${props =>
     !props.bare &&
     `
-    border: 1px solid rgba(0,0,0,.1);
-    border-radius: 4px;
-    background: #FFF;
+    border: 1px solid #A50021;
+    border-radius: 8px;
+    background: linear-gradient(to bottom, #AAAAAA, #8D8D8D);
   `};
   
 `;
@@ -75,9 +75,9 @@ const PageContentChildStyle = styled.div`
   ${props =>
     !props.bare &&
     `
-    border: 1px solid rgba(0,0,0,.1);
-    border-radius: 4px;
-    background: #FFF;
+    border: 1px solid #A50021;
+    border-radius: 8px;
+    background: linear-gradient(to bottom, #AAAAAA, #8D8D8D);
   `};
 `;
 

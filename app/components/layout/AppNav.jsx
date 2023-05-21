@@ -114,7 +114,7 @@ export const Icon = styled.i`
 
 export const TabText = styled.span`
   font-weight: 800;
-  font-size:20px;
+  font-size:22px;
   letter-spacing: 2px;
   font-family: 'CustomFont', sans-serif;
 `;
@@ -127,8 +127,8 @@ export const ActiveIndicator = styled.div`
     position: absolute;
     background: #292b2c;
     width: 210px;
-    border-left: 5px solid #A50021;
-    border-right: 5px solid #A50021;
+    border-left: 8px solid #A50021;
+    border-right: 8px solid #A50021;
   }
 `;
 
