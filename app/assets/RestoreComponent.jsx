@@ -1,12 +1,12 @@
 import * as React from "react"
 
 const RestoreComponent = (props) => (
-  <svg width={150} height={180} xmlns="http://www.w3.org/2000/svg" {...props}>
+  <svg width={100} height={130} xmlns="http://www.w3.org/2000/svg" {...props}>
     <svg
       xmlns="http://www.w3.org/2000/svg"
       viewBox="0 0 24 24"
-      width={150}
-      height={175}
+      width={100}
+      height={125}
       {...props}
     >
       <path fill="none" d="M0 0h24v24H0V0z" />

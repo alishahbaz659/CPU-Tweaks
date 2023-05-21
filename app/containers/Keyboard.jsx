@@ -10,13 +10,13 @@ import {
 } from '../components/shared/Layout';
 
 // Component
-class MouseKeyboard extends PureComponent {
+class Keyboard extends PureComponent {
   render() {
     return (
       <PageWrapper>
         <PageHeader>
           <PageHeaderTitle>
-            Mouse/Keyboard
+            Keyboard
           </PageHeaderTitle>
         </PageHeader>
         <PageContent>
@@ -31,4 +31,4 @@ class MouseKeyboard extends PureComponent {
 // Export
 export default compose(
   _withFadeInAnimation
-)(MouseKeyboard);
+)(Keyboard);

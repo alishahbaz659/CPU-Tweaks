@@ -32,7 +32,7 @@ const PageHeaderStyle = styled.div`
   justify-content: space-between;
   height: 50px;
   padding: 10px 120px 10px 40px;
-  background: #fff;
+  background: #A50021;
   border-bottom: 1px solid rgba(0, 0, 0, 0.1);
   z-index: 1;
 `;
@@ -42,6 +42,7 @@ const PageHeaderTitleStyle = styled.p`
   font-weight: 600;
   margin: 0;
   letter-spacing: -0.5px;
+  color:white;
 `;
 
 const PageHeaderActionsStyle = styled.div`
@@ -56,7 +57,7 @@ const PageHeaderActionsStyle = styled.div`
 const PageContentStyle = styled.div`
   // flex: 1;
   // overflow: hidden;
-  margin: 90px 40px 40px 40px;  
+  margin: 90px 40px 40px 40px;
   ${props =>
     !props.bare &&
     `
@@ -64,6 +65,7 @@ const PageContentStyle = styled.div`
     border-radius: 4px;
     background: #FFF;
   `};
+  
 `;
 
 const PageContentChildStyle = styled.div`

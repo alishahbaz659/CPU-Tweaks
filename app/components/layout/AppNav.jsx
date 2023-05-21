@@ -19,9 +19,14 @@ const setMarginValue = activeTab => {
 
 const allTabs = [
   {
-    title: 'Presets',
-    name: 'presets',
+    title: 'START',
+    name: 'start',
     icon: 'ion-ios-home',
+  },
+  {
+    title: 'TWEAKS',
+    name: 'tweaks',
+    icon: 'ion-android-desktop',
   },
   {
     title: 'GPU',
@@ -29,24 +34,29 @@ const allTabs = [
     icon: 'ion-android-desktop',
   },
   {
-    title: 'M/K',
-    name: 'mousekeyboard',
+    title: 'MEMORY',
+    name: 'memory',
     icon: 'ion-mouse',
   },
   {
-    title: 'Memory',
-    name: 'memory',
+    title: 'MOUSE',
+    name: 'mouse',
     icon: 'ion-ios-color-filter-outline',
   },
   {
-    title: 'Apps',
-    name: 'apps',
+    title: 'KEYBOARD',
+    name: 'keyboard',
     icon: 'ion-android-apps',
   },
   {
-    title: 'About',
-    name: 'about',
+    title: 'TOOLS',
+    name: 'tools',
     icon: 'ion-information-circled',
+  },
+  {
+    title: 'FINISH',
+    name: 'finish',
+    icon: 'ion-android-desktop',
   },
 ];
 
@@ -60,9 +70,12 @@ export const SideBar = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
-  height: 100%;
+  // height: 100%;
   min-width: 80px;
   max-width: 210px;
+  min-height: 100%;
+  max-height: 100%;
+  padding-top:7%;
   background: #292728;
   padding-right: 100px; /* Add padding to the right side */
 `;
@@ -91,7 +104,7 @@ export const Icon = styled.i`
   padding-left: 10px;
   font-size:32px;
   ${props => props.id === 'form' && `color: #6bbb69;`};
-  ${props => props.id === 'presets' && `color: #6bbb69;`};
+  ${props => props.id === 'start' && `color: #6bbb69;`};
   ${props => props.id === 'gpu' && `color: #469fe5;`};
   ${props => props.id === 'mousekeyboard' && `color: #f22727;`};
   ${props => props.id === 'memory' && `color: #cbc189;`};
@@ -101,7 +114,8 @@ export const Icon = styled.i`
 
 export const TabText = styled.span`
   font-weight: 800;
-  font-size:22px;
+  font-size:20px;
+  letter-spacing: 2px;
   font-family: 'CustomFont', sans-serif;
 `;
 

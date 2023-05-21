@@ -127,7 +127,12 @@ function createPreviewWindow() {
     backgroundColor: '#2e2c29',
     show: false,
     title: 'Preview Window',
+    autoHideMenuBar: true,
+    
   });
+
+  mainWindow.setMenuBarVisibility(false)
+
   // Register WindowID
   appConfig.set('previewWindowID', parseInt(previewWindow.id));
   // Track window state

@@ -7,10 +7,14 @@ import Form from '../../containers/Form';
 import Invoices from '../../containers/Invoices';
 import Contacts from '../../containers/Contacts';
 import Settings from '../../containers/Settings';
-import Presets from '../../containers/Presets';
+import Start from '../../containers/Start';
+import Tweaks from '../../containers/Tweaks';
 import Gpu from '../../containers/gpu';
-import MouseKeyboard from '../../containers/Mousekeyboard'
 import Memory from '../../containers/Memory';
+import Mouse from '../../containers/Mouse';
+import Keyboard from '../../containers/Keyboard';
+import Tools from '../../containers/Tools';
+import Finish from '../../containers/Finish';
 import Apps from '../../containers/Apps';
 import About from '../../containers/About';
 
@@ -28,12 +32,15 @@ class AppMain extends Component {
     console.log('Active Tab:', activeTab); 
     return (
       <AppMainContent>
-        {activeTab === 'presets' && <Presets />}
+        {activeTab === 'start' && <Start />}
+        {activeTab === 'tweaks' && <Tweaks />}
         {activeTab === 'gpu' && <Gpu />}
-        {activeTab === 'mousekeyboard' && <MouseKeyboard />}
         {activeTab === 'memory' && <Memory />}
-        {activeTab === 'apps' && <Apps />}
-        {activeTab === 'about' && <About />}
+        {activeTab === 'mouse' && <Mouse />}
+        {activeTab === 'keyboard' && <Keyboard />}
+        {activeTab === 'tools' && <Tools />}
+        {activeTab === 'finish' && <Finish />}
+
       </AppMainContent>
     );
   }
