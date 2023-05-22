@@ -6,6 +6,10 @@ import { findIndex } from 'lodash';
 import { Motion, spring } from 'react-motion';
 import logo from '../../assets/rocketlogo.png';
 import image1 from '../../assets/logo.png';
+import settingImage from '../../assets/settings.png'
+import shieldImage from '../../assets/protectionshield.png'
+import appsImage from '../../assets/apps.png'
+import supportImage from '../../assets/support.png'
 import BoosterComponent from '../../assets/BoosterComponent';
 import TwitterComponent from '../../assets/TwitterComponent';
 import InstagramComponent from '../../assets/InstagramComponent';
@@ -29,42 +33,42 @@ const allTabs = [
   {
     title: 'START',
     name: 'start',
-    icon: 'ion-ios-home',
+    icon: shieldImage,
   },
   {
     title: 'TWEAKS',
     name: 'tweaks',
-    icon: 'ion-android-desktop',
+    icon: settingImage,
   },
-  {
-    title: 'GPU',
-    name: 'gpu',
-    icon: 'ion-android-desktop',
-  },
-  {
-    title: 'MEMORY',
-    name: 'memory',
-    icon: 'ion-mouse',
-  },
-  {
-    title: 'MOUSE',
-    name: 'mouse',
-    icon: 'ion-ios-color-filter-outline',
-  },
-  {
-    title: 'KEYBOARD',
-    name: 'keyboard',
-    icon: 'ion-android-apps',
-  },
+  // {
+  //   title: 'GPU',
+  //   name: 'gpu',
+  //   icon: 'ion-android-desktop',
+  // },
+  // {
+  //   title: 'MEMORY',
+  //   name: 'memory',
+  //   icon: 'ion-mouse',
+  // },
+  // {
+  //   title: 'MOUSE',
+  //   name: 'mouse',
+  //   icon: 'ion-ios-color-filter-outline',
+  // },
+  // {
+  //   title: 'KEYBOARD',
+  //   name: 'keyboard',
+  //   icon: 'ion-android-apps',
+  // },
   {
     title: 'TOOLS',
     name: 'tools',
-    icon: 'ion-information-circled',
+    icon: appsImage,
   },
   {
     title: 'FINISH',
     name: 'finish',
-    icon: 'ion-android-desktop',
+    icon: supportImage,
   },
 ];
 
@@ -99,8 +103,8 @@ export const Tab = styled.a`
   line-height: 1.5;
   text-decoration: none;
   height: 60px;
-  width: 200px;
-  padding: 0 10px; 
+  width:120px;
+  padding: 10px 0px 10px  0; 
   &:hover {
     color: white;
     text-decoration: none;
@@ -109,7 +113,7 @@ export const Tab = styled.a`
 
 
 export const Icon = styled.i`
-  padding-left: 10px;
+  // padding-left: 10px;
   font-size:32px;
   ${props => props.id === 'form' && `color: #6bbb69;`};
   ${props => props.id === 'start' && `color: #6bbb69;`};
@@ -122,21 +126,22 @@ export const Icon = styled.i`
 
 export const TabText = styled.span`
   font-weight: 800;
-  font-size:22px;
+  font-size:20px;
+  color:#a8a4a4;
   letter-spacing: 2px;
   font-family: 'CustomFont', sans-serif;
 `;
 
 export const ActiveIndicator = styled.div`
-  height: ${allTabs.length * 60}px;
+  height: ${allTabs.length * 80}px;
   width: 5px;
   position: absolute;
   > div {
     position: absolute;
-    background: #292b2c;
-    width: 210px;
-    border-left: 8px solid #A50021;
-    border-right: 8px solid #A50021;
+    background: #501C1C;
+    width: 120px;
+    // border-left: 8px solid #A50021;
+    // border-right: 8px solid #A50021;
   }
 `;
 
@@ -146,15 +151,15 @@ flex: 1 0 auto;
   position: relative;
 display: flex;
 flex-direction: column;
-justify-content: space-around;
+justify-content: space-between;
 align-content: center;
 align-self: center;
 min-width: 80px;
-  max-width: 210px;
+  max-width: 120px;
   min-height: 100%;
   max-height: 100%;
   // padding-top:5%;
-  background: #292728;
+  background: #201c1c;
   padding-right: 100px;
 `;
 
@@ -163,11 +168,11 @@ const styles = {
     display: 'flex',
     justifyContent: 'space-between',
     padding:'5px',
-    width:'200px'
+    width:'120px'
   },
   image: {
-    width: '30px',
-    height: '30px',
+    width: '20px',
+    height: '20px',
   },
   logo: {
      width:'100px', 
@@ -177,7 +182,20 @@ const styles = {
     display:'flex',
     justifyContent:'center',
     width:'200px',  
+  },
+  navTabs:{
+    display:'flex',
+    flexDirection:'column',
+    justifyContent:'center',
+    marginBottom:'35px',
+    marginTop:'10px'
+
   }
+
+};
+
+const CustomImageComponent = ({ icon }) => {
+  return <img src={icon} alt="Custom Icon" style={{ width: '50px', height: '50px', marginTop: '20%' }} />;
 };
 
 
@@ -186,16 +204,18 @@ import AppUpdate from './AppUpdate';
 function AppNav({ activeTab, changeTab }) {
   const marginTopValue = setMarginValue(activeTab);
   const allTabsComponent = allTabs.map(tab => (
-    <Tab key={tab.name} href="#" onClick={() => changeTab(tab.name)}>
+    <Tab key={tab.name} href="#" onClick={() => changeTab(tab.name)} style={styles.navTabs}>
       {/* <Icon id={tab.name} className={tab.icon} /> */}
+      <CustomImageComponent icon={tab.icon} />
+      <div style={{margin: '0px 0px 6px 0'}}></div>
       <TabText>{tab.title}</TabText>
     </Tab>
   ));
   return (
     <Wrapper>
-      <div  style={styles.logoWrapper}>
+      {/* <div  style={styles.logoWrapper}>
       <img src={logo} alt="Logo" style={styles.logo}></img>
-      </div>
+      </div> */}
       {/* <AppUpdate /> */}
     <SideBar>
       <div>

@@ -14,7 +14,7 @@ const AppMainContentStyle = styled.div`
   overflow: auto;
   width: 100%;
   height: 100%;
-  background: #F0F0F0;
+  background: #282424;
 `;
 
 const PageWrapperStyle = styled.div`
@@ -57,13 +57,14 @@ const PageHeaderActionsStyle = styled.div`
 const PageContentStyle = styled.div`
   // flex: 1;
   // overflow: hidden;
-  margin: 0px 40px 40px 40px;
+  margin-right:40px;
+  // padding: 10px 15px 10px 15px;
   ${props =>
     !props.bare &&
     `
-    border: 1px solid #A50021;
+    border: 0px solid #A50021;
     border-radius: 8px;
-    background: linear-gradient(to bottom, #AAAAAA, #8D8D8D);
+    background: #383434;
   `};
   
 `;
@@ -71,13 +72,13 @@ const PageContentStyle = styled.div`
 const PageContentChildStyle = styled.div`
   // flex: 1;
   // overflow: hidden;
-  margin: 1px 40px 40px 40px;
+  // margin: 1px 40px 40px 40px;
   ${props =>
     !props.bare &&
     `
-    border: 1px solid #A50021;
+    border: 0px solid #A50021;
     border-radius: 8px;
-    background: linear-gradient(to bottom, #AAAAAA, #8D8D8D);
+    background: #383434;
   `};
 `;
 
