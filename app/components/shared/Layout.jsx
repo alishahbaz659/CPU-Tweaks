@@ -82,6 +82,21 @@ const PageContentChildStyle = styled.div`
   `};
 `;
 
+
+
+const TweakContentStyle = styled.div`
+// flex: 1;
+// overflow: hidden;
+margin: 90px 40px 40px 40px;
+${props =>
+  !props.bare &&
+  `
+  border: 1px solid rgba(0,0,0,.1);
+  border-radius: 4px;
+  background: #FFF;
+`};
+`;
+
 const PageFooterStyle = styled.div`
   position: fixed;
   width: 100%;
@@ -114,6 +129,10 @@ const PageHeaderActions = props => (
 const PageContent = props => (
   <PageContentStyle bare={props.bare}>{props.children}</PageContentStyle>
 );
+const TweakContent = props => (
+  <TweakContentStyle bare={props.bare}>{props.children}</TweakContentStyle>
+);
+
 
 const PageContentChild = props => (
   <PageContentChildStyle bare={props.bare}>{props.children}</PageContentChildStyle>
@@ -133,4 +152,5 @@ export {
   PageContent,
   PageContentChild,
   PageFooter,
+  TweakContent
 };
