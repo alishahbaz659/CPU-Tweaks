@@ -7,7 +7,7 @@ import { Motion, spring } from 'react-motion';
 import logo from '../../assets/rocketlogo.png';
 import image1 from '../../assets/logo.png';
 import settingImage from '../../assets/settings.png'
-import shieldImage from '../../assets/protectionshield.png'
+import shieldImage from '../../assets/protectiondone.png'
 import appsImage from '../../assets/apps.png'
 import supportImage from '../../assets/support.png'
 import BoosterComponent from '../../assets/BoosterComponent';
@@ -102,12 +102,14 @@ export const Tab = styled.a`
   font-size: 14px;
   line-height: 1.5;
   text-decoration: none;
-  height: 60px;
+  height: 120px;
   width:120px;
   padding: 10px 0px 10px  0; 
+  background: ${props => props.active ? '#501C1C' : 'transparent'};
   &:hover {
     color: white;
     text-decoration: none;
+    background: ${props => props.active ? '#501C1C' : '#333'};
   }
 `;
 
@@ -187,15 +189,16 @@ const styles = {
     display:'flex',
     flexDirection:'column',
     justifyContent:'center',
-    marginBottom:'35px',
-    marginTop:'10px'
+    // marginBottom:'50px',
+    // marginTop:'20px'
+
 
   }
 
 };
 
 const CustomImageComponent = ({ icon }) => {
-  return <img src={icon} alt="Custom Icon" style={{ width: '50px', height: '50px', marginTop: '20%' }} />;
+  return <img src={icon} alt="Custom Icon" style={{ width: '50px', height: '50px' }} />;
 };
 
 
@@ -204,7 +207,9 @@ import AppUpdate from './AppUpdate';
 function AppNav({ activeTab, changeTab }) {
   const marginTopValue = setMarginValue(activeTab);
   const allTabsComponent = allTabs.map(tab => (
-    <Tab key={tab.name} href="#" onClick={() => changeTab(tab.name)} style={styles.navTabs}>
+    <Tab key={tab.name} href="#" onClick={() => changeTab(tab.name)} style={styles.navTabs}
+    active={activeTab === tab.name}
+    >
       {/* <Icon id={tab.name} className={tab.icon} /> */}
       <CustomImageComponent icon={tab.icon} />
       <div style={{margin: '0px 0px 6px 0'}}></div>
@@ -219,7 +224,7 @@ function AppNav({ activeTab, changeTab }) {
       {/* <AppUpdate /> */}
     <SideBar>
       <div>
-        <Motion style={{ marginTop: spring(marginTopValue, springConfig) }}>
+        {/* <Motion style={{ marginTop: spring(marginTopValue, springConfig) }}>
           {({ marginTop }) => (
             <ActiveIndicator>
               <div
@@ -230,7 +235,7 @@ function AppNav({ activeTab, changeTab }) {
               />
             </ActiveIndicator>
           )}
-        </Motion>
+        </Motion> */}
         {allTabsComponent}
       </div>
       

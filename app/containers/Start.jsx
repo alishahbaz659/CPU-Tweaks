@@ -43,8 +43,8 @@ const styles = `
     display: flex;
     flex-direction: row;
     justify-content: center;
-    height: 60%;
-    margin-top:5%;
+    height: 65%;
+    margin-top:10%;
   }
 
   .step-container {
@@ -71,9 +71,9 @@ const styles = `
   }
 
   .page-content-wrapper {
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
+      // display: flex;
+      // flex-direction: column;
+      // justify-content: center;
       height: 100%;
   }
  
