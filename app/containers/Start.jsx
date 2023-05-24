@@ -21,21 +21,25 @@ const styles = `
 // }
 
   .tweaks-button {
-    width:250px;
-    padding: 20px 30px;
-    border-radius: 10px;
-    background-color: #501c1c;
+    width:220px;
+    padding: 10px 0px 10px 0px;
+    border-radius: 5px;
+    background-color: #EE2B47;
     color: white;
     letter-spacing: 2.0px;
-    font-size: 24px;
+    font-size: 20px;
     font-family: 'CustomFont', sans-serif;
-    border: none;
+    // border: none;
+    BORDER-COLOR: black;
+    border-width: thin;
     font-weight:600;
     cursor: pointer;
-    display: block;
+    display: flex;
+    justify-content:center;
     margin:10px;
     padding-left:40px;
     padding-right:40px;
+    transform: translateY(45px);
 
   }
   
@@ -43,12 +47,12 @@ const styles = `
     display: flex;
     flex-direction: row;
     justify-content: center;
-    height: 65%;
-    margin-top:10%;
-  }
+    height: 45%;
+    margin-top:15%;
+    }
 
   .step-container {
-    // padding: 10px 10px 20px 10px;
+    padding: 15px 10px 15px 10px;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
@@ -58,15 +62,16 @@ const styles = `
   }
 
   .step-label {
-    font-size: 20px;
+    font-size: 24px;
     font-weight: 400;
-    color: #a8a4a4;
+    color: #FFFFFF;
     width:100%;
     display: flex;
     flex-direction:column;
     justify-content:center;
     font-family: 'CustomFont', sans-serif;
     letter-spacing: 1.0px;
+    padding-bottom: 25px;
  
   }
 
@@ -80,10 +85,10 @@ const styles = `
   .after_label_line {
       display: flex;
       background-color: grey;
-      width : 220px;
+      width : 245px;
       height: 2px;
-      margin: 10px 0px 20px;
-      padding: 0px 20px 0px 15px;
+      // margin: 10px 0px 20px;
+      // padding: 0px 20px 0px 15px;
   }
 
 `;
@@ -101,7 +106,7 @@ class Start extends PureComponent {
         <div className="step-container">
         <label className="step-label" >SYSTEM RESTORE POINT<div className='after_label_line'></div></label>
         
-        <RestoreComponent style={{ margin: '0px 0px 20px 0px',padding:'5px' }}/>
+        <RestoreComponent />
         <button className="tweaks-button">RESTORE POINT</button>
         </div>
         </PageContent>
@@ -109,7 +114,7 @@ class Start extends PureComponent {
         <PageContentChild >
         <div className="step-container">
           <label className="step-label">USER ACCOUNT CONTROL<div className='after_label_line'></div></label>
-          <BoosterComponent style={{ margin: '0px 0px 20px 0px',padding:'5px' }} />
+          <BoosterComponent />
             <button className="tweaks-button">Disable UAC</button>
               </div>
         </PageContentChild>

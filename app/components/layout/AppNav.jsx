@@ -105,11 +105,11 @@ export const Tab = styled.a`
   height: 120px;
   width:120px;
   padding: 10px 0px 10px  0; 
-  background: ${props => props.active ? '#501C1C' : 'transparent'};
+  background: ${props => props.active ? '#EE2B47' : 'transparent'};
   &:hover {
     color: white;
     text-decoration: none;
-    background: ${props => props.active ? '#501C1C' : '#333'};
+    background: ${props => props.active ? '#EE2B47' : '#333'};
   }
 `;
 
@@ -129,7 +129,7 @@ export const Icon = styled.i`
 export const TabText = styled.span`
   font-weight: 800;
   font-size:20px;
-  color:#a8a4a4;
+  color:#FFFFFF;
   letter-spacing: 2px;
   font-family: 'CustomFont', sans-serif;
 `;
@@ -140,7 +140,7 @@ export const ActiveIndicator = styled.div`
   position: absolute;
   > div {
     position: absolute;
-    background: #501C1C;
+    background: #EE2B47;
     width: 120px;
     // border-left: 8px solid #A50021;
     // border-right: 8px solid #A50021;
@@ -161,7 +161,7 @@ min-width: 80px;
   min-height: 100%;
   max-height: 100%;
   // padding-top:5%;
-  background: #201c1c;
+  background: #1E1E1E;
   padding-right: 100px;
 `;
 

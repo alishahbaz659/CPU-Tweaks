@@ -2,11 +2,11 @@ import * as React from "react"
 
 const RestoreComponent = (props) => (
   <svg
-    fill="#a8a4a4"
+    fill="#FFFFFF"
     xmlns="http://www.w3.org/2000/svg"
     width={140}
     height={140}
-    viewBox="0 0 52 52"
+    viewBox="0 0 54 54"
     xmlSpace="preserve"
     {...props}
   >

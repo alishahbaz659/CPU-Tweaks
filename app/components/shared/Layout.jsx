@@ -14,7 +14,7 @@ const AppMainContentStyle = styled.div`
   overflow: auto;
   width: 100%;
   height: 100%;
-  background: #282424;
+  background: #262626;
 `;
 
 const PageWrapperStyle = styled.div`
@@ -62,7 +62,7 @@ const PageContentStyle = styled.div`
   ${props =>
     !props.bare &&
     `
-    border: 0px solid #A50021;
+    border: thin solid #000000;
     border-radius: 8px;
     background: #383434;
   `};
@@ -76,7 +76,7 @@ const PageContentChildStyle = styled.div`
   ${props =>
     !props.bare &&
     `
-    border: 0px solid #A50021;
+    border: thin solid #000000;
     border-radius: 8px;
     background: #383434;
   `};
@@ -87,15 +87,44 @@ const PageContentChildStyle = styled.div`
 const TweakContentStyle = styled.div`
 // flex: 1;
 // overflow: hidden;
-margin: 90px 40px 40px 40px;
+margin: 40px 40px 15px 40px;
 ${props =>
   !props.bare &&
   `
-  border: 1px solid rgba(0,0,0,.1);
+  border: 0px solid rgba(0,0,0,.1);
   border-radius: 4px;
-  background: #FFF;
+  // background: #FFF;
 `};
 `;
+
+
+const TweakContentStyleSecond = styled.div`
+// flex: 1;
+// overflow: hidden;
+margin: 15px 40px 15px 40px;
+${props =>
+  !props.bare &&
+  `
+  border: 0px solid rgba(0,0,0,.1);
+  border-radius: 4px;
+  // background: #FFF;
+`};
+`;
+
+const TweakContentStyleThird = styled.div`
+// flex: 1;
+// overflow: hidden;
+margin: 15px 40px 40px 40px;
+${props =>
+  !props.bare &&
+  `
+  border: 0px solid rgba(0,0,0,.1);
+  border-radius: 4px;
+  // background: #FFF;
+  `};
+`;
+
+
 
 const PageFooterStyle = styled.div`
   position: fixed;
@@ -133,6 +162,14 @@ const TweakContent = props => (
   <TweakContentStyle bare={props.bare}>{props.children}</TweakContentStyle>
 );
 
+const TweakContentSecond = props => (
+  <TweakContentStyleSecond bare={props.bare}>{props.children}</TweakContentStyleSecond>
+);
+
+const TweakContentThird = props => (
+  <TweakContentStyleThird bare={props.bare}>{props.children}</TweakContentStyleThird>
+);
+
 
 const PageContentChild = props => (
   <PageContentChildStyle bare={props.bare}>{props.children}</PageContentChildStyle>
@@ -152,5 +189,7 @@ export {
   PageContent,
   PageContentChild,
   PageFooter,
-  TweakContent
+  TweakContent,
+  TweakContentSecond,
+  TweakContentThird
 };
