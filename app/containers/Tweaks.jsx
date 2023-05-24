@@ -28,8 +28,8 @@ const styles = `
     border-radius: 5px;
     background-color: #EE2B47;
     color: white;
-    letter-spacing: 2.0px;
-    font-size: 14px;
+    letter-spacing: 1.0px;
+    font-size: 18px;
     font-family: 'CustomFont', sans-serif;
     // border: none;
     font-weight:200;
@@ -44,20 +44,45 @@ const styles = `
 
   }
 
-  .memory-boost-button {
-    width:100px;
-    padding: 25px;
+  .ram-tweaks-button {
+    width:120px;
+    padding: 10px;
     border-radius: 5px;
     background-color: #EE2B47;
     color: white;
-    letter-spacing: 2.0px;
-    font-size: 14px;
+    letter-spacing: 1.0px;
+    font-size: 18px;
     font-family: 'CustomFont', sans-serif;
-    border: none;
+    // border: none;
+    font-weight:200;
+    cursor: pointer;
+    display: block;
+    margin:5px;
+    padding-left:10px;
+    padding-right:10px;
+    border-color: black;
+    border-width: thin;
+  }
+
+
+
+  .memory-boost-button {
+    width:100px;
+    padding: 25px 15px 25px 15px;
+    border-radius: 5px;
+    background-color: #EE2B47;
+    color: white;
+    letter-spacing: 1.0px;
+    font-size: 18px;
+    font-family: 'CustomFont', sans-serif;
+    // border: none;
+    border-color: black;
+    border-width: thin;
     font-weight:200;
     cursor: pointer;
     display: flex;
     // margin:5px;
+    
   }
 
 
@@ -131,8 +156,6 @@ const styles = `
     align-items: center;
     justify-content: space-around;
     border: thin solid #000000;
-
-    
   }
 
   .itemTwoWrapperItems{
@@ -232,14 +255,14 @@ class Tweaks extends PureComponent {
             </div>
             <div>
               <div className='ramButtonWrapper'>
-                <button className="tweaks-button">8 GB</button>
-                <button className="tweaks-button">24 GB</button>
+                <button className="ram-tweaks-button">8 GB</button>
+                <button className="ram-tweaks-button">24 GB</button>
               </div>
             </div>
             <div>
               <div className='ramButtonWrapper'>
-                <button className="tweaks-button">16 GB</button>
-                <button className="tweaks-button">32 GB</button>
+                <button className="ram-tweaks-button">16 GB</button>
+                <button className="ram-tweaks-button">32 GB</button>
               </div>
             </div>
             <div>
@@ -251,9 +274,6 @@ class Tweaks extends PureComponent {
           </div>
 
         </TweakContentThird>
-
-
-
       </PageWrapper>
     );
   }
