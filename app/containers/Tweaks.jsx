@@ -23,7 +23,7 @@ import ram from '../assets/ram.png'
 const styles = `
 
   .tweaks-button {
-    width:120px;
+    width:130px;
     padding: 5px 10px 5px 10px;
     border-radius: 5px;
     background-color: #EE2B47;
@@ -34,10 +34,10 @@ const styles = `
     // border: none;
     font-weight:200;
     cursor: pointer;
-    display: block;
+    // display: block;
     // margin:5px;
-    padding-left:10px;
-    padding-right:10px;
+    // padding-left:10px;
+    // padding-right:10px;
     border-color: black;
     border-width: thin;
     transform: translateY(18px);
@@ -90,8 +90,6 @@ const styles = `
     display:flex;
     flex-direction:row;
     justify-content:space-around;
-    
-    
   }
   .divwrapperRam{
     display:flex;
@@ -136,7 +134,6 @@ const styles = `
     width:350px;
     justify-content:space-around;
     // padding-bottom:10px;
-
   }
 
 .ramButtonWrapper{

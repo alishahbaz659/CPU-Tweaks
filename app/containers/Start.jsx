@@ -34,11 +34,8 @@ const styles = `
     border-width: thin;
     font-weight:600;
     cursor: pointer;
-    display: flex;
-    justify-content:center;
-    margin:10px;
-    padding-left:40px;
-    padding-right:40px;
+    // display: flex;
+    // justify-content:center;
     transform: translateY(45px);
 
   }

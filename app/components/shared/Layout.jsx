@@ -124,7 +124,44 @@ ${props =>
   `};
 `;
 
+const ToolsContentStyle = styled.div`
+// flex: 1;
+// overflow: hidden;
+margin: 60px 40px 15px 40px;
+${props =>
+  !props.bare &&
+  `
+  border: 0px solid rgba(0,0,0,.1);
+  border-radius: 4px;
+  // background: #FFF;
+  `};
+`;
 
+const ToolsContentStyleSecond = styled.div`
+// flex: 1;
+// overflow: hidden;
+margin: 15px 40px 15px 40px;
+${props =>
+  !props.bare &&
+  `
+  border: 0px solid rgba(0,0,0,.1);
+  border-radius: 4px;
+  // background: #FFF;
+`};
+`;
+
+const ToolsContentStyleThird = styled.div`
+// flex: 1;
+// overflow: hidden;
+margin: 15px 40px 15px 40px;
+${props =>
+  !props.bare &&
+  `
+  border: 0px solid rgba(0,0,0,.1);
+  border-radius: 4px;
+  // background: #FFF;
+`};
+`;
 
 const PageFooterStyle = styled.div`
   position: fixed;
@@ -170,6 +207,20 @@ const TweakContentThird = props => (
   <TweakContentStyleThird bare={props.bare}>{props.children}</TweakContentStyleThird>
 );
 
+const ToolsContent = props => (
+  <ToolsContentStyle bare={props.bare}>{props.children}</ToolsContentStyle>
+);
+
+const ToolsContentSecond = props => (
+  <ToolsContentStyleSecond bare={props.bare}>{props.children}</ToolsContentStyleSecond>
+);
+
+const ToolsContentThird = props => (
+  <ToolsContentStyleThird bare={props.bare}>{props.children}</ToolsContentStyleThird>
+);
+
+
+
 
 const PageContentChild = props => (
   <PageContentChildStyle bare={props.bare}>{props.children}</PageContentChildStyle>
@@ -191,5 +242,8 @@ export {
   PageFooter,
   TweakContent,
   TweakContentSecond,
-  TweakContentThird
+  TweakContentThird,
+  ToolsContent,
+  ToolsContentSecond,
+  ToolsContentThird
 };
