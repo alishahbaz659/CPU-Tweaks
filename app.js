@@ -79,14 +79,20 @@ function createMainWindow() {
     x: mainWindownStateKeeper.x,
     y: mainWindownStateKeeper.y,
     width: 1050,
-    height: 650,
+    height: 700,
     minWidth: 1050,
-    minHeight: 650,
+    minHeight: 700,
     // resizable:false,
     backgroundColor: '#2e2c29',
     show: false,
+    autoHideMenuBar:true,
     title: 'Main Window',
   });
+
+
+  mainWindow.setMenuBarVisibility(false) 
+
+
   // Register WindowID
   appConfig.set('mainWindowID', parseInt(mainWindow.id));
   // Track window state
@@ -99,9 +105,10 @@ function createMainWindow() {
       slashes: true,
     })
   );
+  // if (isDev || forceDevtools) 
   // Add Event Listeners
   mainWindow.on('show', event => {
-    if (isDev || forceDevtools) mainWindow.webContents.openDevTools({ mode: 'detach' });
+    mainWindow.webContents.openDevTools({ mode: 'detach' });
   });
   mainWindow.on('close', event => {
     if (process.platform === 'darwin') {
@@ -124,7 +131,7 @@ function createPreviewWindow() {
     width: previewWindownStateKeeper.width,
     height: previewWindownStateKeeper.height,
     minWidth: 1024,
-    minHeight: 800,
+    minHeight: 850,
     backgroundColor: '#2e2c29',
     show: false,
     title: 'Preview Window',
@@ -415,11 +422,11 @@ function windowStateKeeper(windowName) {
 
 function initialize() {
   app.on('ready', () => {
-    createTourWindow();
+    // createTourWindow();
     createMainWindow();
-    createPreviewWindow();
-    setInitialValues();
-    migrateData();
+    // createPreviewWindow();
+    // setInitialValues();
+    // migrateData();
     if (isDev) addDevToolsExtension();
     addEventListeners();
     loadMainProcessFiles();

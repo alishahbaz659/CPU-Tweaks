@@ -11,7 +11,10 @@ import {
 } from '../components/shared/Layout';
 import RestoreComponent from '../assets/RestoreComponent';
 import BoosterComponent from '../assets/BoosterComponent';
-import '../fonts/fonts.css';
+// import '../fonts/fonts.css';
+import '../../static/css/preview/font.css';
+
+
 
 const styles = `
 //   .buttons-container {
@@ -116,6 +119,9 @@ class Start extends PureComponent {
               </div>
         </PageContentChild>
         </div>
+        </div>
+        <div style={{ textAlign: 'center', marginTop: 'auto', paddingBottom: '10px',color:'#565656', fontWeight:600 }}>
+          Copyright &copy; 2023 All Rights Reserved
         </div>
       </PageWrapper>
      

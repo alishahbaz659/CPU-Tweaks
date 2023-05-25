@@ -6,7 +6,10 @@ import {
   AboutContent,
   AboutContentSecond
 } from '../components/shared/Layout';
-import tachometer from '../assets/tachometer.png';
+import whatsapp from '../assets/whatsapp.png';
+import discord from '../assets/discord.png';
+import email from '../assets/email.png';
+
 
 const styles = `
 
@@ -67,7 +70,7 @@ const styles = `
     width:350px;
     justify-content:space-around;
     // padding-bottom:10px;
-    transform: translateY(20px);
+    transform: translateY(35px);
   }
 
 
@@ -154,7 +157,7 @@ class About extends PureComponent {
             <div className='itemOneWrapper'>
               <div className='itemOneWrapperItems'>
               <div className='IconWrapper'>
-                  <img src={tachometer} alt='sa' height='80%' width='80%' />
+                  <img src={whatsapp} alt='sa' height='60%' width='60%' />
                 </div>
 
                 <div className='buttonWrapper'>
@@ -166,7 +169,7 @@ class About extends PureComponent {
             <div className='itemTwoWrapper'>
               <div className='itemTwoWrapperItems'>
               <div className='IconWrapper'>
-                  <img src={tachometer} alt='sa' height='80%' width='80%' />
+                  <img src={discord} alt='sa' height='60%' width='60%' />
                 </div>
 
                 <div className='buttonWrapper'>
@@ -178,7 +181,7 @@ class About extends PureComponent {
             <div className='itemTwoWrapper'>
               <div className='itemTwoWrapperItems'>
                 <div className='IconWrapper'>
-                  <img src={tachometer} alt='sa' height='80%' width='80%' />
+                  <img src={email} alt='sa' height='60%' width='60%' />
                 </div>
 
                 <div className='buttonWrapper'>
@@ -188,6 +191,10 @@ class About extends PureComponent {
             </div>
           </div>
         </AboutContentSecond>
+
+        <div style={{ textAlign: 'center', marginTop: 'auto', paddingBottom: '10px',color:'#565656', fontWeight:600 }}>
+          Copyright &copy; 2023 All Rights Reserved
+        </div>
       </PageWrapper>
     );
   }

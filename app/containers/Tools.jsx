@@ -209,7 +209,9 @@ class Tools extends PureComponent {
             </div>
           </div>
         </ToolsContentThird>
-
+        <div style={{ textAlign: 'center', marginTop: 'auto', paddingBottom: '10px',color:'#565656', fontWeight:600 }}>
+          Copyright &copy; 2023 All Rights Reserved
+        </div>
 
       </PageWrapper>
     );

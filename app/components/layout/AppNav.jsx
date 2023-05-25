@@ -74,7 +74,8 @@ const allTabs = [
 
 // Styles
 import styled from 'styled-components';
-import '../../fonts/fonts.css';
+// import '../../fonts/fonts.css';
+import '../../../static/css/preview/font.css';
 
 export const SideBar = styled.div`
   // flex: 1 0 auto;

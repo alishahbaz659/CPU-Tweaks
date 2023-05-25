@@ -49,3 +49,12 @@
     url('../../fonts/Lora/Lora-Regular.ttf') format('truetype');
     font-weight: 400;
 }
+
+/* party */
+@font-face {
+  font-family: 'CustomFont';
+  src:
+    local('CustomFont'),
+    url('../../fonts/party/partyconfetti.ttf') format('truetype');
+    font-weight: 400;
+}
