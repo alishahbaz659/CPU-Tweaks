@@ -39,7 +39,7 @@ class AppMain extends Component {
         {activeTab === 'mouse' && <Mouse />}
         {activeTab === 'keyboard' && <Keyboard />}
         {activeTab === 'tools' && <Tools />}
-        {activeTab === 'finish' && <Finish />}
+        {activeTab === 'about' && <About />}
 
       </AppMainContent>
     );

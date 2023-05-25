@@ -28,7 +28,7 @@ const styles = `
     border-radius: 5px;
     background-color: #EE2B47;
     color: white;
-    letter-spacing: 1.0px;
+    letter-spacing: 1.5px;
     font-size: 18px;
     font-family: 'CustomFont', sans-serif;
     // border: none;
@@ -124,7 +124,7 @@ const styles = `
     flex-direction: row;
     align-items: center;
     justify-content: space-around;
-    width: 90%;
+    width: 92%;
     border: thin solid #000000;
   }
 

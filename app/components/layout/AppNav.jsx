@@ -66,8 +66,8 @@ const allTabs = [
     icon: appsImage,
   },
   {
-    title: 'FINISH',
-    name: 'finish',
+    title: 'ABOUT',
+    name: 'about',
     icon: supportImage,
   },
 ];
@@ -191,8 +191,6 @@ const styles = {
     justifyContent:'center',
     // marginBottom:'50px',
     // marginTop:'20px'
-
-
   }
 
 };

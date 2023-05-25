@@ -26,7 +26,7 @@ const styles = `
     border-radius: 5px;
     background-color: #EE2B47;
     color: white;
-    letter-spacing: 2.0px;
+    letter-spacing: 1.5px;
     font-size: 20px;
     font-family: 'CustomFont', sans-serif;
     // border: none;
@@ -36,7 +36,7 @@ const styles = `
     cursor: pointer;
     // display: flex;
     // justify-content:center;
-    transform: translateY(45px);
+    transform: translateY(40px);
 
   }
   
@@ -44,7 +44,7 @@ const styles = `
     display: flex;
     flex-direction: row;
     justify-content: center;
-    height: 45%;
+    height: 50%;
     margin-top:15%;
     }
 

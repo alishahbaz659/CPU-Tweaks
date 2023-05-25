@@ -64,7 +64,7 @@ const PageContentStyle = styled.div`
     `
     border: thin solid #000000;
     border-radius: 8px;
-    background: #383434;
+    background: #333333;
   `};
   
 `;
@@ -78,7 +78,7 @@ const PageContentChildStyle = styled.div`
     `
     border: thin solid #000000;
     border-radius: 8px;
-    background: #383434;
+    background: #333333;
   `};
 `;
 
@@ -137,6 +137,20 @@ ${props =>
   `};
 `;
 
+
+const AboutContentStyle = styled.div`
+// flex: 1;
+// overflow: hidden;
+margin: 60px 40px 15px 40px;
+${props =>
+  !props.bare &&
+  `
+  border: 0px solid rgba(0,0,0,.1);
+  border-radius: 4px;
+  // background: #FFF;
+  `};
+`;
+
 const ToolsContentStyleSecond = styled.div`
 // flex: 1;
 // overflow: hidden;
@@ -149,6 +163,20 @@ ${props =>
   // background: #FFF;
 `};
 `;
+
+const AboutContentStyleSecond = styled.div`
+// flex: 1;
+// overflow: hidden;
+margin: 15px 40px 15px 40px;
+${props =>
+  !props.bare &&
+  `
+  border: 0px solid rgba(0,0,0,.1);
+  border-radius: 4px;
+  // background: #FFF;
+`};
+`;
+
 
 const ToolsContentStyleThird = styled.div`
 // flex: 1;
@@ -211,6 +239,15 @@ const ToolsContent = props => (
   <ToolsContentStyle bare={props.bare}>{props.children}</ToolsContentStyle>
 );
 
+
+const AboutContent = props => (
+  <AboutContentStyle bare={props.bare}>{props.children}</AboutContentStyle>
+);
+
+const AboutContentSecond = props => (
+  <AboutContentStyleSecond bare={props.bare}>{props.children}</AboutContentStyleSecond>
+);
+
 const ToolsContentSecond = props => (
   <ToolsContentStyleSecond bare={props.bare}>{props.children}</ToolsContentStyleSecond>
 );
@@ -245,5 +282,7 @@ export {
   TweakContentThird,
   ToolsContent,
   ToolsContentSecond,
-  ToolsContentThird
+  ToolsContentThird,
+  AboutContent,
+  AboutContentSecond
 };

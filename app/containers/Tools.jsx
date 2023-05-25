@@ -29,7 +29,7 @@ const styles = `
     flex-direction:column;
     justify-content:center;
     font-family: 'CustomFont', sans-serif;
-    letter-spacing: 1.0px;
+    letter-spacing: 1.5px;
     padding-bottom: 25px;
  
   }
