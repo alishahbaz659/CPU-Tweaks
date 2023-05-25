@@ -87,7 +87,7 @@ const PageContentChildStyle = styled.div`
 const TweakContentStyle = styled.div`
 // flex: 1;
 // overflow: hidden;
-margin: 40px 40px 15px 40px;
+margin: 60px 40px 15px 40px;
 ${props =>
   !props.bare &&
   `
@@ -101,7 +101,7 @@ ${props =>
 const TweakContentStyleSecond = styled.div`
 // flex: 1;
 // overflow: hidden;
-margin: 15px 40px 15px 40px;
+margin: 40px 40px 15px 40px;
 ${props =>
   !props.bare &&
   `
@@ -114,7 +114,7 @@ ${props =>
 const TweakContentStyleThird = styled.div`
 // flex: 1;
 // overflow: hidden;
-margin: 15px 40px 40px 40px;
+margin: 40px 40px 40px 40px;
 ${props =>
   !props.bare &&
   `

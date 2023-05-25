@@ -24,7 +24,7 @@ const styles = `
 
   .tweaks-button {
     width:120px;
-    padding: 10px;
+    padding: 5px 10px 5px 10px;
     border-radius: 5px;
     background-color: #EE2B47;
     color: white;
@@ -35,12 +35,12 @@ const styles = `
     font-weight:200;
     cursor: pointer;
     display: block;
-    margin:5px;
+    // margin:5px;
     padding-left:10px;
     padding-right:10px;
     border-color: black;
     border-width: thin;
-    transform: translateY(30px);
+    transform: translateY(18px);
 
   }
 
@@ -104,7 +104,7 @@ const styles = `
   .itemOneWrapper{
     background: #333333;
     width:350px;
-    height:140px;
+    height:125px;
     display:flex;
     flex-direction:column;
     align-items:center;
@@ -113,7 +113,7 @@ const styles = `
   .itemTwoWrapper{
     background: #333333;
     width:350px;
-    height:140px;
+    height:125px;
     display:flex;
     flex-direction:column;
     align-items:center;
@@ -121,7 +121,7 @@ const styles = `
 
   .itemThreeWrapper{
     background: #333333;
-    height: 140px;
+    height: 125px;
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -135,7 +135,7 @@ const styles = `
     flex-direction:row;
     width:350px;
     justify-content:space-around;
-    padding-bottom:10px;
+    // padding-bottom:10px;
 
   }
 
@@ -144,7 +144,7 @@ const styles = `
     flex-direction:column;
     // width:350px;
     justify-content:space-around;
-    padding-bottom:10px;
+    // padding-bottom:10px;
     height:100%;
 }
 
@@ -172,6 +172,7 @@ const styles = `
     height:30%;
     display:flex;
     justify-content:center;
+    margin-top:5px;
   }
 
   .IconWrapperRam{
