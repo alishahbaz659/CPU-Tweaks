@@ -33,6 +33,7 @@ const ItemsHeader = styled.tr`
   font-weight: 500;
   font-size: 0.8em;
   color: #2c323a;
+  //test
   letter-spacing: 1px;
   text-transform: uppercase;
 `;
