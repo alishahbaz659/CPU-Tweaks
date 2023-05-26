@@ -82,17 +82,15 @@ function createMainWindow() {
     height: 700,
     minWidth: 1050,
     minHeight: 700,
-    // resizable:false,
+    resizable:false,
     backgroundColor: '#2e2c29',
     show: false,
     autoHideMenuBar:true,
+    frame:false,
     title: 'Main Window',
   });
 
-
   mainWindow.setMenuBarVisibility(false) 
-
-
   // Register WindowID
   appConfig.set('mainWindowID', parseInt(mainWindow.id));
   // Track window state
@@ -105,10 +103,10 @@ function createMainWindow() {
       slashes: true,
     })
   );
-  // if (isDev || forceDevtools) 
+   
   // Add Event Listeners
   mainWindow.on('show', event => {
-    mainWindow.webContents.openDevTools({ mode: 'detach' });
+    if (isDev || forceDevtools) mainWindow.webContents.openDevTools({ mode: 'detach' });
   });
   mainWindow.on('close', event => {
     if (process.platform === 'darwin') {
@@ -120,6 +118,10 @@ function createMainWindow() {
     }
   });
 }
+
+
+
+
 
 function createPreviewWindow() {
   // Get window state

@@ -1,0 +1,74 @@
+html {
+    margin: 0;
+    padding: 0;
+  }
+  
+  body {
+    padding: 0;
+    margin: 0;
+    background-color: #2D2D30;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+  }
+  
+  #title-bar {
+    -webkit-app-region: drag;
+    height: 32px;
+    padding: 0;
+    margin: 0;
+    color: #ADADAD; 
+    font-family: sans-serif;
+  }
+  
+  #title {
+    position: fixed;
+    font-family: 'CustomFont', sans-serif;
+    letter-spacing: 3px;
+    top: 0;
+    left: 12px;
+    line-height: 32px;
+    font-size: 18px;
+    font-weight: bold;
+    top: 2px;
+  }
+
+  #min-btn{
+    font-weight: bolder;
+  }
+
+  #close-btn{
+    font-weight: bolder;
+  }
+  
+  #title-bar-btns {
+    -webkit-app-region: no-drag;
+    position: fixed;
+    /* top: 1px; */
+    right: 0;
+  }
+  
+  #title-bar-btns button {
+    height: 32px;
+    width: 32px;
+    background-color: transparent;
+    border: none;
+    color: #F1F1F1;
+    font-size: 16px;
+  }
+  
+  #title-bar-btns button:hover {
+    background-color: #3F3F41;
+  }
+  
+  #content {
+    padding: 12px;
+    color: #CCCCCC;
+  }
+  
+  a {
+    color: #68217A;
+  }
+  

@@ -7,7 +7,7 @@ import styled from 'styled-components';
 const AppWrapperStyle = styled.div`
   display: flex;
   flex-direction: row;
-  height: 100%;
+  height: 96%;
 `;
 
 const AppMainContentStyle = styled.div`
