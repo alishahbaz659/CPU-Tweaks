@@ -29,7 +29,7 @@ Whether you're a power user, gamer, or developer, CPU Tweaks gives you control o
 - Electron.js – for building the desktop app  
 - Node.js – for backend logic and system calls  
 - Systeminformation – for hardware monitoring  
-- [Electron Forge](https://www.electronstribution  
+- [Electron Forge](https://www.electronstribution.com)
 
 ---
 
